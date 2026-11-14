@@ -1,0 +1,48 @@
+/* No fonts, scripts or images are loaded from anywhere: the page asks the reader's browser for nothing else. */
+:root {
+  --page: #fbfaf7;
+  --ink: #1d1f1e;
+  --soft: #5b615e;
+  --line: #dcd9d1;
+  --accent: #0b6b57;
+  --panel: #eef3ef;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --page: #151716;
+    --ink: #e9ebe8;
+    --soft: #a3aaa6;
+    --line: #333836;
+    --accent: #6fd0b7;
+    --panel: #1e2422;
+  }
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--page);
+  color: var(--ink);
+  font: 17px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+main { max-width: 44rem; margin: 0 auto; padding: 2.5rem 1rem 4rem; }
+h1 { font-size: 2rem; line-height: 1.2; margin: 0 0 0.5rem; letter-spacing: -0.01em; }
+h2 { font-size: 1.2rem; margin: 2.25rem 0 0.5rem; }
+p, ul { margin: 0 0 1rem; }
+ul { padding-left: 1.25rem; }
+li { margin-bottom: 0.4rem; }
+a { color: var(--accent); }
+code { font: 0.9em ui-monospace, "SF Mono", Menlo, Consolas, monospace; overflow-wrap: anywhere; }
+.crumb { margin-bottom: 1.5rem; font-size: 0.95rem; }
+.meta { color: var(--soft); font-size: 0.95rem; }
+.lead { font-size: 1.15rem; }
+.summary { background: var(--panel); border-left: 4px solid var(--accent); padding: 1rem 1rem 0.1rem; margin: 1.5rem 0; }
+table { width: 100%; border-collapse: collapse; margin: 0 0 1rem; font-size: 0.95rem; }
+th, td { text-align: left; vertical-align: top; padding: 0.6rem 0.75rem 0.6rem 0; border-bottom: 1px solid var(--line); }
+th { color: var(--soft); font-weight: 600; }
+/* On a phone each row becomes a block, so nothing scrolls sideways. */
+@media (max-width: 40rem) {
+  thead { display: none; }
+  tr { display: block; padding: 0.6rem 0; border-bottom: 1px solid var(--line); }
+  td { display: block; border: 0; padding: 0.15rem 0; }
+}

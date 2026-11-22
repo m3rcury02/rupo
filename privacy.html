@@ -12,7 +12,7 @@
 <p class="crumb"><a href="./">Rupo</a></p>
 <h1>Rupo Privacy Policy</h1>
 <p class="meta">Applies to the Rupo app for Android (package <code>dev.gunal.rupo</code>).<br>
-Last updated: 15 November 2026</p>
+Last updated: 23 November 2026</p>
 
 <div class="summary">
 <p><strong>In short.</strong> Rupo reads the SMS your bank and card send for each payment, and notes
@@ -34,8 +34,9 @@ listed for review. Rupo reads each SMS as it arrives, also while the app is clos
 messages already in your inbox.</td>
 <td>For a bank or card transaction message: the text of the message, its sender, the amount, the payee as
 the bank printed it, the last digits of the account or card, the reference number and the date. A message
-that looks like a transaction but that Rupo cannot read is kept too, in a list you can see in the app
-under Settings, Bank SMS, "SMS Rupo couldn't read".</td>
+that looks like a payment but that Rupo can't read for certain is shown in the payments list, marked
+"check this". A bank message with an amount that Rupo skips is kept for 60 days under Settings,
+Bank SMS, "Skipped SMS".</td>
 </tr>
 <tr>
 <td><strong>Location</strong>, including in the background</td>
@@ -74,6 +75,10 @@ it to look, and your IP address, which any request over the internet carries.</p
 <p>When you tap "Open in Maps", the position is
 passed to the maps app on your phone. When you tap "Copy summary", a line about the outing is put on your
 phone's clipboard.</p>
+<p>When you tap "Send to the developer", Rupo opens your email app with a message to the developer that
+contains the SMS exactly as received, its sender and the time it arrived, the app version, and what Rupo
+read and what you tapped. The developer uses it to teach Rupo that message's format, and keeps it with
+the app's tests. To have it deleted, write to the contact address below.</p>
 <p>Rupo gets the phone's position from Google Play services. Google's handling of location is covered
 by Google's own privacy policy.</p>
 

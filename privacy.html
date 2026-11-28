@@ -75,12 +75,13 @@ privacy policy</a>.</p>
 <p>When you open a payment that has a position, the position is also sent to Photon, a search over
 OpenStreetMap run by komoot, to list the named shops near it. Photon receives the position, how far around
 it to look, and your IP address, which any request over the internet carries.</p>
-<p>If you turn on <strong>Share and see shop names</strong> (asked once, on a payment made at a shop, and in
-Settings), the names you give shops under "Paid to" are sent to Rupo's own server, so that
-other Rupo users who pay the same payee at the same spot are offered the name, and you are offered theirs.
-The server runs on Supabase, in Mumbai. A name is sent only for a payment made at a precise spot away from
-the Home and Office you set, to a payee that is not a phone number or an online shop, and only while "Share
-this name" is ticked under it. For each name, the server receives: the payee as your bank printed it, the
+<p><strong>Shop names.</strong> Once you tap OK on the notice "Shop names are shared" on the Payments
+screen, or turn on <strong>Share and see shop names</strong> in Settings, the names you give shops under
+"Paid to" are sent to Rupo's own server, including names you gave before, so that other Rupo users who
+pay the same payee at the same spot are offered the name, and you are offered theirs. The server runs on
+Supabase, in Mumbai. A name is sent only for a payment made at a precise spot away from the Home and
+Office you set, to a payee that is not a phone number or an online shop, and never when it is the name of
+one of the friends you added. For each name, the server receives: the payee as your bank printed it, the
 spot as a square about 150 m across (never the exact position), the name, the day, and a code made from a
 random number kept on your phone and that spot. The code lets the server count one vote per phone per spot
 without being able to tell which names came from the same phone. No amount, time of day, account, note,

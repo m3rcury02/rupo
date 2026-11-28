@@ -12,7 +12,7 @@
 <p class="crumb"><a href="./">Rupo</a></p>
 <h1>Rupo Privacy Policy</h1>
 <p class="meta">Applies to the Rupo app for Android (package <code>dev.gunal.rupo</code>).<br>
-Last updated: 23 November 2026</p>
+Last updated: 28 November 2026</p>
 
 <div class="summary">
 <p><strong>In short.</strong> Rupo reads the SMS your bank and card send for each payment, and notes
@@ -59,11 +59,15 @@ Home and Office.</td>
 </tr>
 </tbody>
 </table>
-<p>Rupo also keeps what you enter yourself: the notes you write about payments, the friends you add,
+<p>Rupo also keeps what you enter yourself: the names you give payees under "Paid to" and the notes
+you write about payments, the friends you add,
 who was at each outing and their shares, the place names you type, and the payees and merchant names you
 choose to hide.</p>
 
 <h2>Who your data is shared with</h2>
+<p>When Google Play installed Rupo, the app asks the Play Store whether an update is available.
+Google Play uses device information, the app version and the list of installed modules and asset
+packs to check availability and download size.</p>
 <p>When you open a payment, its position is shown on a map drawn by Google Maps. To draw the map, Google
 receives the position, your IP address, information about your device and the app (including an
 identifier the map uses to count its users), and crash data if the map fails. Google's handling of this is covered by <a href="https://policies.google.com/privacy">Google's
@@ -71,7 +75,21 @@ privacy policy</a>.</p>
 <p>When you open a payment that has a position, the position is also sent to Photon, a search over
 OpenStreetMap run by komoot, to list the named shops near it. Photon receives the position, how far around
 it to look, and your IP address, which any request over the internet carries.</p>
-<p>Rupo does not currently share your data with anyone else.</p>
+<p>If you turn on <strong>Share and see shop names</strong> (asked once, on a payment made at a shop, and in
+Settings), the names you give shops under "Paid to" are sent to Rupo's own server, so that
+other Rupo users who pay the same payee at the same spot are offered the name, and you are offered theirs.
+The server runs on Supabase, in Mumbai. A name is sent only for a payment made at a precise spot away from
+the Home and Office you set, to a payee that is not a phone number or an online shop, and only while "Share
+this name" is ticked under it. For each name, the server receives: the payee as your bank printed it, the
+spot as a square about 150 m across (never the exact position), the name, the day, and a code made from a
+random number kept on your phone and that spot. The code lets the server count one vote per phone per spot
+without being able to tell which names came from the same phone. No amount, time of day, account, note,
+contact, phone number or account of yours is sent.</p>
+<p>To offer you names, Rupo asks the server for the names in the area around a payment you open, an area
+about 40 by 20 km, at most once a day for each area. A name is offered only once at least two phones gave
+it. Like any request over the internet, these requests carry your IP address; the server does not store
+it, but Supabase keeps request logs, which include it, for a short time.</p>
+<p>Rupo does not share your data with anyone else.</p>
 <p>When you tap "Open in Maps", the position is
 passed to the maps app on your phone. When you tap "Share" on an outing, a line about the outing is passed
 to the app you choose.</p>
@@ -89,6 +107,10 @@ by Google's own privacy policy.</p>
 <li>open Android Settings, Apps, Rupo, Storage, and choose "Clear storage".</li>
 </ul>
 <p>Both remove all of it at once and cannot be undone.</p>
+<p>Turning off <strong>Share and see shop names</strong> in Settings takes back every shop name this phone
+shared, the next time it is online. Uninstalling or clearing storage first leaves those names on the server,
+since nothing there links them to you; to have one removed, write to the contact address below with the
+name and the payee.</p>
 <p>You can withdraw any permission at any time in Android Settings, Apps, Rupo, Permissions. Without SMS
 access nothing new is recorded. Without location access payments are recorded without a place.</p>
 
